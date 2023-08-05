@@ -17,9 +17,6 @@ namespace othello {
             }
         } else {
             int currentLegalMoves = getLegalMoves().size();
-            if(currentLegalMoves == 0) {
-                currentLegalMoves = 1;
-            }
 
             // Mobility ratio is the ratio of the the current available moves and the other
             // player's previous move. If the other player had no moves then it's considered zero
@@ -94,10 +91,11 @@ namespace othello {
             for(Position position: legalPositions) {
                 OthelloSolver othelloCopy = board;
                 othelloCopy.placePiece(position);
+                othelloCopy.makeTurnOpposite();
                 if(othelloCopy.getLegalMoves().size() == 0) {
                     prevLegalMoves = 0;
-                } else {
                     othelloCopy.makeTurnOpposite();
+                } else {
                     prevLegalMoves = legalPositions.size();
                 }
                 Node childNode = miniMax(othelloCopy, depth-1, alpha, beta, prevLegalMoves);
