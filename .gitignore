@@ -1,0 +1,12 @@
+# IDE specific
+.vscode/
+
+# Python specific
+dist/
+venv/
+PyOthello.egg-info/
+*.pyc
+
+# CMake specific
+build/
+
