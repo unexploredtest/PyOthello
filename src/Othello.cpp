@@ -180,6 +180,7 @@ namespace othello {
 
                         piecesToChange.push_back(pieceToChange);
                     }
+                    break;
                 } else {
                     continue;
                 }
