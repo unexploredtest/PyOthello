@@ -1,0 +1,17 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "PyOthello"
+version = "0.0.1"
+authors = [
+  { name="unexploredtest" }
+]
+description = "Othello AI for Python written in C++"
+readme = "README.md"
+requires-python = ">=3.6"
+
+[project.urls]
+"Homepage" = "https://github.com/unexploredtest/PyOthello"
+"Bug Tracker" = "https://github.com/unexploredtest/PyOthello/issues"
