@@ -129,7 +129,7 @@ setup(
     name="PyOthello",
     version="0.0.1",
     author="unexploredtest",
-    description="Othello for Python, written in C++",
+    description="Othello with AI for Python, written in C++",
     ext_modules=[CMakeExtension("PyOthello")],
     cmdclass={"build_ext": CMakeBuild},
     zip_safe=False,
